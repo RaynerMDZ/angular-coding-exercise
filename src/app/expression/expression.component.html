@@ -1,0 +1,21 @@
+
+
+<div class="container" >
+
+  <h1>Expression Area</h1>
+  <div class="expression-area" cdkDropList >
+
+
+    <input type="text" class="input" [(ngModel)]="x" *ngIf="add || sub || fooBool || complicated">
+    <input type="text" class="input" [(ngModel)]="y" *ngIf="add || sub || fooBool">
+    <input type="text" class="input" [(ngModel)]="z" *ngIf="fooBool">
+
+  </div>
+
+
+  <button cdkDrag="addDrop" (click)="addition()">add</button>
+  <button cdkDrag="subDrop" (click)="subtract()">subtract</button>
+  <button cdkDrag="fooDrop" (click)="foo()">foo</button>
+  <button cdkDrag="complicatedDrop" (click)="doSomethingComplicated()">doSomethingComplicated</button>
+
+</div>
